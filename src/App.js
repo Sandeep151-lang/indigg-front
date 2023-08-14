@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import Tournament from './component/Tournaments'
+import 'bootstrap/dist/css/bootstrap.css'
+import './App.css'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import CreateTournament from './component/Tournaments/tournament'
+import Dashboard from './component/Dashboard'
+import Participant from './component/Participant'
+import ParticipantApply from './component/Participant/ParticipantApply'
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      {/* <Tournament/> */}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+          <Route path="/tournament" element={<Tournament />} />
+          <Route path="/create/tournament" element={<CreateTournament />} />
+          <Route path="/participant" element={<Participant />} />
+          <Route path="/participant/apply/:id" element={<ParticipantApply />} />
+          {/* <Route path="/" element={<PrivateRoute />}>
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="post" element={<Post />} />
+        </Route> */}
+        </Routes>
+      </BrowserRouter>
+    </>
+  )
 }
 
-export default App;
+export default App

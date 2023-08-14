@@ -1,38 +1,105 @@
-.App {
-  text-align: center;
+nav {
+  height: 60px;
+  background-color: whitesmoke;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.nav-part {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 6%;
+}
+
+.create-tournament {
+  padding: 10px 20px;
+}
+
+.tournament {
+  width: 100vw;
+  height: 100vh;
+}
+
+.table {
+  /* border: 1px solid black; */
+  height: calc(100vh-60px);
+  width: 90%;
+  overflow-y: scroll;
+  margin: 0 5%;
+  position: relative;
+  border-radius: 50px;
+}
+
+/* .table-head{
+  position: absolute;
+  width: 100vw;
+} */
+
+.danger-btn {
+  background-color: red;
+  color: white;
+  border: 1px solid red;
+}
+
+/* th,td{
+  border: 1px solid black;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;} */
+
+.forms-tournament {
+  width: 100vw;
+  height: 100vh;
+  /* border: 1px solid red; */
+  position: relative;
+}
+
+form {
+  position: absolute;
+  width: 40%;
+  height: 90%;
+  border: 1px solid;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 5px 10px #888888;
+  border-radius: 5px;
+}
+
+.form-part {
+  padding: 5%;
+}
+
+.date-picker {
+  width: 100%;
+}
+
+.submit-tournament {
+  width: 100%;
+  margin-top: 4%;
+}
+
+.dahsboard {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: rgb(205, 205, 226);
+}
+
+.dash-part {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: large;
+  text-decoration: none;
+}
+
+.admin {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.goBack{
+  position: fixed;
+  top: 2%;
+  font-size: 10px;
 }
